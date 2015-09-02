@@ -1,0 +1,46 @@
+---
+# vars file for rpi_mini
+
+# Pass true for resetting SSH keys on the host, e.g.: ... --extra-vars "rpimini_ssh_reset=true" ...
+# If true, the SSH host keys are regenerated. It's useful to apply once only.
+rpimini_ssh_reset: false
+
+################################################################################
+# Packages which we want to remove from the initial system
+rpimini_redundant_packages:
+  - xserver-xorg
+  - xserver-common
+# x11-common is needed for MPD.
+#  - x11-common
+  - x2x
+  - xfce4-mixer
+  - xfce-keyboard-shortcut
+  - libxfce4util4
+  - lxde
+  - midory           # browser im old Raspbian versions
+  - epiphany-browser # browser in new Raspbian versions
+  - wolfram-engine
+  - scratch
+  - java-common
+  - oracle-java*
+  - gnome*
+  - gvfs*
+  - xpdf
+  - zenity
+  - weston
+  - supercollider
+  - squeak*
+  - sonic-pi
+  - ruby*
+  - penguinspuzzle
+  - lightdm
+  - cups*
+  - minecraft-pi
+
+# Packages which we need to install
+rpimini_required_packages:
+  - vim
+  - htop
+  - nmon
+  - tmux
+  - mc

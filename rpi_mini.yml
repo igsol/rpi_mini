@@ -1,0 +1,8 @@
+---
+# Playbook which initialize standard RPI Rasbian image to minimal
+# configuration with needed settings.
+
+- hosts:
+    - mpd_hosts
+  roles:
+    - rpi_mini

@@ -1,0 +1,11 @@
+---
+# Installation
+
+#...................................................................................................
+- name: required packages installation
+  apt:
+    name={{item}}
+    force=yes
+    state=present
+  with_items: rpimini_required_packages
+  tags: pkg

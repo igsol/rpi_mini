@@ -1,0 +1,6 @@
+---
+# tasks file for rpi_mini
+
+- include: reinit_ssh_key.yml
+- include: remove_redundant.yml
+- include: install_packages.yml

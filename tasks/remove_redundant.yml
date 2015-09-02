@@ -1,0 +1,25 @@
+---
+# tasks file for mpd_rpi
+
+- name: remove redundant packages
+  apt:
+    name={{item}}
+    purge=yes
+    force=yes
+    state=absent
+  with_items: rpimini_redundant_packages
+
+- name: remove python_games
+  file:
+    force=yes
+    path=/home/pi/python_games
+    state=absent
+
+- name: remove /opt/vc
+  file:
+    force=yes
+    path=/opt/vc
+    state=absent
+
+- name: apt autoremove
+  shell: echo Y | apt-get autoremove --force-yes

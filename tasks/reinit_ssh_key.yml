@@ -1,0 +1,14 @@
+---
+# tasks file for mpd_rpi
+
+- name: remove host SSH keys
+  tags: ssh_reset
+  shell:
+    /bin/rm -f /etc/ssh/ssh_host_*
+  when: rpimini_ssh_reset | bool
+
+- name: reconfigure SSH server
+  tags: ssh_reset
+  shell:
+    dpkg-reconfigure openssh-server
+  when: rpimini_ssh_reset | bool
