@@ -2,7 +2,7 @@ Rasperry Pi minimal
 ===================
 
 This is auxiliary role for mpd_rpi one.
-The role and playbook is intended for:
+The role and playbook are intended for:
  
 * Original [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) installation is "minimized", i.e. redundant packages are deleted (e.g. xserver-xorg, etc.).
 
